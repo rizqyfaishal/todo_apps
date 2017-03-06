@@ -1,0 +1,31 @@
+$plus-mark-top: 12px;
+$plus-mark-left: 24px;
+
+.add-todo {
+	.input-label {
+		position: relative;
+		input{
+			padding-left: 2em;
+		}
+		i.fa.fa-plus {
+			position: absolute;
+			top: $plus-mark-top;
+			left: $plus-mark-left;
+		}
+	}
+	.input-detail {
+		width: 100%;
+		margin-top: 1em;
+		height: 0;
+		transition: heigh cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.7s;;
+		overflow: hidden;
+		&.show_detail {
+			height: 400px;
+		}
+		button {
+			float: right;
+			margin-top: 0.5em;
+			margin-left: 0.5em;
+		}
+	}
+}

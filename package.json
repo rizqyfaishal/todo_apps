@@ -1,0 +1,37 @@
+{
+  "name": "todo_apps",
+  "version": "1.0.0",
+  "description": "todo apps, web",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rizqyfaishal/todo_apps.git"
+  },
+  "keywords": [
+    "todo",
+    "app",
+    "todo",
+    "list"
+  ],
+  "author": "rizqyfaishal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rizqyfaishal/todo_apps/issues"
+  },
+  "homepage": "https://github.com/rizqyfaishal/todo_apps#readme",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-copy": "^1.0.0",
+    "gulp-image": "^2.7.5",
+    "gulp-sass": "^3.1.0",
+    "gulp-string-replace": "^0.4.0",
+    "gulp-uglify": "^2.0.1"
+  }
+}

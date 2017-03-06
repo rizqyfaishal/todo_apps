@@ -1,0 +1,18 @@
+$todo-bg-color: #ccc;
+
+.todo {
+	margin-top: 2em;
+	padding: 1em;
+	border: 1px solid darken($todo-bg-color, 4%);
+	// background-color: $todo-bg-color;
+	.check {
+		vertical-align: middle;
+		font-size: 120%;
+	}
+	.todo-control {
+		button {
+			margin-left: 0.5em;
+			float: right;
+		}
+	}
+}
