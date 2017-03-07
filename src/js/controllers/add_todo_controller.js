@@ -16,5 +16,9 @@
 			$scope.show_detail = false;
 			$scope.reset();
 		};
+
+		$scope.formatDate = function(date){
+			return +(new Date(date));
+		}
 	}]);	
 })(app);

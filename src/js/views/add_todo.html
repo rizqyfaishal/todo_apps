@@ -1,32 +1,84 @@
-<div class="add-todo">
-	<div class="row">
-		<form>
-			<div class="input-label">
-				<div class="col-lg-12">
-					<input type="text" name="add_todo" placeholder="Add Todo here" 
-							class="form-control input-title" 
-							ng-focus="show_detail=true"
-							ng-model="input.title">
-					<i class="fa fa-plus"></i>
-				</div>
+<form>
+	<div class="add-todo">
+		<div class="circle-plus" ng-hide="show_detail" ng-click="show_detail=true">
+			<div class="circle">
+				<i class="fa fa-plus"></i>
 			</div>
-			<div class="input-detail" ng-class="{ 'show_detail': show_detail }">
-				<div class="col-lg-12">
-					<label>Description</label>
-					<textarea class="form-control" 
-									placeholder="Add Description Here" 
-									rows="5"
-									ng-model="input.description" 
-									placeholder=""></textarea>
+		</div>
+		<div class="row" ng-show="show_detail" class="add_todo_detail">
+			<div class="add-todo-title">
+				<div class="col-lg-1">
+					<h4><i class="fa fa-plus"></i></h1>
 				</div>
-				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					
+				<div class="col-lg-10">
+					<h4>Add Todo</h4>
 				</div>
-				<div class="col-lg-12">
-					<button class="btn btn-success" ng-click="save(input);">Save</button>
-					<button class="btn btn-danger" ng-click="close();">Close</button>
+				<div class="col-lg-1">
+					<h4><i class="fa fa-close"></i></h4>
 				</div>
-			</div>
-		</form>
+			</div>	 
+			<form>
+				<div class="input-label">
+					<div class="col-lg-12">
+						<label>What is to be done?</label>
+						<input type="text" name="add_todo" placeholder="Add Todo here" 
+								class="form-control input-title" 
+								ng-focus="show_detail=true"
+								ng-model="input.title">
+						<i class="fa fa-plus"></i>
+					</div>
+				</div>
+				<div class="input-detail">
+					<div class="col-lg-12">
+						<label>Notes</label>
+						<textarea class="form-control" 
+										placeholder="Add Description Here" 
+										rows="5"
+										ng-model="input.description" 
+										placeholder=""></textarea>
+					</div>
+					<div class="col-lg-12">
+						<div class="row">
+							<div class="col-lg-6 col-lg-push-3">
+								<div class="priorities">
+									<div class="row">
+										<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+											<label>
+												<input type="radio" name="priority" ng-model="input.priority" value="low" />
+												Low
+											</label>
+										</div>
+										<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+											<label>
+												<input type="radio" name="priority" ng-model="input.priority" value="medium" />
+												Medium
+											</label>
+										</div>
+										<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+										<label>
+												<input type="radio" name="priority" ng-model="input.priority" value="high" />
+												High
+										</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<label>Start Date</label>
+						<date-picker ng-model="input.start_date" format-date="formatDate"></date-picker>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<label>Due Date</label>
+						<date-picker ng-model="input.due_date" format-date="formatDate"></date-picker>
+					</div>
+					<div class="col-lg-12">
+						<button class="btn btn-success" ng-click="save(input	);">Save</button>
+						<button class="btn btn-danger" ng-click="close();">Close</button>
+					</div>
+				</div>
+			</form>
+		</div>
 	</div>
-</div>
+</form>

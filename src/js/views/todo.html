@@ -1,11 +1,17 @@
 <div class="todo">
 	<div class="row">
 		<div class="col-lg-1">
-			<div class="check">
-				<input type="checkbox" name="todo_completed" ng-model="todo.completed">
+			<div class="check-box" ng-click="todo.completed = !todo.completed">
+				<i class="fa fa-check check-item" ng-class="{ 'completed': todo.completed }"></i>
 			</div>
 		</div>
-		<div class="col-lg-7">{{ todo.title }}</div>
+		<div class="col-lg-7">
+			<div class="todo-content" ng-class="{'completed': todo.completed }">
+				<h4>{{ todo.title }}</h4>
+				<p>{{ todo.description }}</p>
+				<p>{{ todo.start_date | date }} - {{ todo.due_date | date }}</p>
+			</div>
+		</div>
 		<div class="col-lg-4">
 			<div class="todo-control">
 				<button class="btn btn-primary"><i class="fa fa-pencil">&nbsp;</i>Edit</button>

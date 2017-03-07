@@ -23,6 +23,7 @@
 		};
 		storage.save_todos_to_local = function(){
 			var todos_to_save = JSON.stringify(storage.list);
+			console.log(todos_to_save);
 			$window.localStorage.setItem('todos', todos_to_save);
 		};
 		storage.update_todo = function(id, new_todo){

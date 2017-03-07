@@ -1,7 +1,40 @@
-$plus-mark-top: 12px;
+$plus-mark-top: 48px;
 $plus-mark-left: 24px;
 
 .add-todo {
+
+
+	.add-todo-title {
+		background-color: #acacac;
+		color: white;
+	}
+	.circle-plus {
+		display: block;
+		margin: 1em auto;
+		cursor: pointer;
+		height: 45px;
+		width: 45px;
+		.circle {
+			text-align: center;
+			i.fa {
+				font-size: 2em;
+				background-color: #acacac;
+				color: white;
+				padding: 0.3em;
+				border-radius: 50%;
+			}
+		}
+		&:hover {
+			.circle {
+				i.fa {
+					background-color: lighten(#acacac, 5%);
+				}
+			}
+		}
+	}
+	label {
+		margin-top: 1em;
+	}
 	.input-label {
 		position: relative;
 		input{
@@ -16,16 +49,15 @@ $plus-mark-left: 24px;
 	.input-detail {
 		width: 100%;
 		margin-top: 1em;
-		height: 0;
-		transition: heigh cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.7s;;
-		overflow: hidden;
-		&.show_detail {
-			height: 400px;
-		}
 		button {
 			float: right;
 			margin-top: 0.5em;
 			margin-left: 0.5em;
+		}
+		.priorities {
+			label {
+
+			}
 		}
 	}
 }

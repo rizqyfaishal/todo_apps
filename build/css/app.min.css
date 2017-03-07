@@ -10334,20 +10334,192 @@ button.close {
   clip: auto;
 }
 
-.todo {
-  margin-top: 2em;
-  padding: 1em;
-  border: 1px solid #c2c2c2;
+.angular-date-picker {
+  color: #333;
+  font: normal 14px sans-serif;
+  border: 1px solid #ddd;
+  display: block;
+  background: #fff;
 }
 
-.todo .check {
+.angular-date-picker>._month {
+  text-align: center;
+  line-height: 22px;
+  padding: 10px;
+  background: #fcfcfc;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.angular-date-picker>._month>button {
+  color: #555;
+  font: normal 14px sans-serif;
+  outline: none;
+  position: absolute;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.angular-date-picker>._month>button:hover {
+  color: #333;
+}
+
+.angular-date-picker>._month>button._previous {
+  left: 10px;
+}
+
+.angular-date-picker>._month>button._next {
+  right: 10px;
+}
+
+.angular-date-picker>._days {
+  width: 210px;
+  margin: 10px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.angular-date-picker>._days>._day-of-week,
+.angular-date-picker>._days>._day {
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  width: 30px;
+  line-height: 28px;
+  float: left;
+}
+
+.angular-date-picker>._days>._day-of-week {
+  font-weight: bold;
+}
+
+.angular-date-picker>._days>._day.-padding {
+  opacity: .5;
+}
+
+.angular-date-picker>._days>._day {
+  cursor: pointer;
+}
+
+.angular-date-picker>._days>._day.-selected {
+  background: #e0e0e0;
+}
+
+.angular-date-picker>._days>._day.-today {
+  border-color: #aaa;
+}
+
+.angular-date-picker>._days>._day:hover {
+  background: #eee;
+}
+
+.angular-date-picker>._days:after {
+  content: '';
+  display: block;
+  clear: left;
+  height: 0;
+}
+
+.todo-container {
+  padding: 2em 1em;
+  border: 1px solid #acacac;
+}
+
+.title-app {
+  background-color: #acacac;
+  color: #fff;
+  padding: 0.5em 1em;
   vertical-align: middle;
-  font-size: 120%;
+}
+
+.title-app i.fa {
+  text-align: center;
+}
+
+.saved-status {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.todo {
+  margin-top: 0.5em;
+  padding: 1em;
+  border-left: 9px solid #96BC0D;
+  background-color: rgba(150,188,13,0.2);
+}
+
+.todo .check-box {
+  cursor: pointer;
+  position: relative;
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
+  border: 2px solid #acacac;
+}
+
+.todo .check-box .check-item {
+  position: absolute;
+  top: -5px;
+  left: 0px;
+  font-size: 2em;
+  opacity: 0;
+}
+
+.todo .check-box .check-item.completed {
+  color: black;
+  opacity: 1;
+}
+
+.todo .check-box:hover .check-item {
+  color: #d2d2d2;
+  opacity: 1;
 }
 
 .todo .todo-control button {
   margin-left: 0.5em;
   float: right;
+}
+
+.todo .todo-content.completed h4,
+.todo .todo-content.completed p {
+  text-decoration: line-through;
+}
+
+.add-todo .add-todo-title {
+  background-color: #acacac;
+  color: white;
+}
+
+.add-todo .circle-plus {
+  display: block;
+  margin: 1em auto;
+  cursor: pointer;
+  height: 45px;
+  width: 45px;
+}
+
+.add-todo .circle-plus .circle {
+  text-align: center;
+}
+
+.add-todo .circle-plus .circle i.fa {
+  font-size: 2em;
+  background-color: #acacac;
+  color: white;
+  padding: 0.3em;
+  border-radius: 50%;
+}
+
+.add-todo .circle-plus:hover .circle i.fa {
+  background-color: #b9b9b9;
+}
+
+.add-todo label {
+  margin-top: 1em;
 }
 
 .add-todo .input-label {
@@ -10360,20 +10532,13 @@ button.close {
 
 .add-todo .input-label i.fa.fa-plus {
   position: absolute;
-  top: 12px;
+  top: 48px;
   left: 24px;
 }
 
 .add-todo .input-detail {
   width: 100%;
   margin-top: 1em;
-  height: 0;
-  transition: heigh cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.7s;
-  overflow: hidden;
-}
-
-.add-todo .input-detail.show_detail {
-  height: 400px;
 }
 
 .add-todo .input-detail button {

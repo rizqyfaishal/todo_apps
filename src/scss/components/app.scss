@@ -1,0 +1,23 @@
+$app-title-bg: #acacac;
+$app-title-color: white;
+
+.todo-container {
+	padding: 2em 1em;
+	border: 1px solid $app-title-bg;
+}
+
+.title-app {
+		background-color: $app-title-bg;
+		color: $app-title-color;
+		padding: 0.5em 1em;
+		vertical-align: middle;
+		i.fa {
+			text-align: center;
+		}
+}
+
+.saved-status {
+	position: fixed;
+	top: 0;
+	right: 0;
+}

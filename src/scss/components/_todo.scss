@@ -1,18 +1,47 @@
-$todo-bg-color: #ccc;
+$todo-bg-color: rgba(150, 188, 13, 0.2);
+$todo-side-border-color: #96BC0D;
 
 .todo {
-	margin-top: 2em;
+	margin-top: 0.5em;
 	padding: 1em;
-	border: 1px solid darken($todo-bg-color, 4%);
-	// background-color: $todo-bg-color;
-	.check {
+	border-left: 9px solid $todo-side-border-color;
+	background-color: $todo-bg-color;
+	.check-box {
+		cursor: pointer;
+		position: relative;
+		height: 24px;
+		width: 24px;
 		vertical-align: middle;
-		font-size: 120%;
+		border: 2px solid #acacac;
+		.check-item {
+			position: absolute;
+			top: -5px;
+			left: 0px;
+			font-size: 2em;
+			opacity: 0;
+			&.completed {
+				color: black;
+				opacity: 1;
+			}
+		}
+		&:hover {
+			.check-item {
+				color: lighten(#acacac, 15%);
+				opacity: 1;
+			}
+		}
 	}
 	.todo-control {
 		button {
 			margin-left: 0.5em;
 			float: right;
+		}
+	}
+	.todo-content {
+		&.completed {
+			h4, p {
+				text-decoration: line-through;
+			}
 		}
 	}
 }

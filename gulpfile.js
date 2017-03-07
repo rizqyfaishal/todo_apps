@@ -15,7 +15,7 @@ gulp.task('compile-js',function () {
     del('./build/js/**/*.js').then(function () {
         return gulp
             .src(['./src/js/libs/angular.min.js',
-            			'./src/js/libs/angular-ui-bootstrap.js',
+            			'./src/js/libs/angular-date-picker.js',
             			'./src/js/templates.js',
             			'./src/js/app.js',
             			'./src/js/config/**/*.js',

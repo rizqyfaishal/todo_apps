@@ -1,12 +1,26 @@
+<div class="saved-status">
+	<p>Saved on {{ timestamp_save | date }}</p>
+</div>
 <div class="container">
 	<div class="row">
 		<div class="col-lg-8 col-lg-push-2 col-md-10 col-md-push-1 col-sm-12 col-xs-12">
-			<h1 class="text-center" ng-click="click();">{{ title }}</h1>
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="todo-app">
-						<add-todo input="todo"></add-todo>
-						<todo-list data="todos"></todo-list>
+			<div class="title-app">
+				<div class="row">
+					<div class="col-lg-11">
+						<h4>{{ title }}</h4>
+					</div>
+					<div class="col-lg-1">
+						<h4><i class="fa fa-wrench"></i></h4>
+					</div>
+				</div>
+			</div>
+			<div class="todo-container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="todo-app">
+							<todo-list data="todos"></todo-list>
+							<add-todo input="todo"></add-todo>
+						</div>
 					</div>
 				</div>
 			</div>
