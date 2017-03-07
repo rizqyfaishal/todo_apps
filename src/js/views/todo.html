@@ -1,5 +1,5 @@
-<div class="todo">
-	<div class="row">
+<div class="todo" ng-init="edit_status=false">
+	<div class="row" ng-hide="edit_status">
 		<div class="col-lg-1">
 			<div class="check-box" ng-click="todo.completed = !todo.completed">
 				<i class="fa fa-check check-item" ng-class="{ 'completed': todo.completed }"></i>
@@ -7,15 +7,31 @@
 		</div>
 		<div class="col-lg-7">
 			<div class="todo-content" ng-class="{'completed': todo.completed }">
-				<h4>{{ todo.title }}</h4>
+				<h3>{{ todo.title }}</h3>
 				<p>{{ todo.description }}</p>
-				<p>{{ todo.start_date | date }} - {{ todo.due_date | date }}</p>
+				<p class="text-bold">{{ todo.start_date | date }} - {{ todo.due_date | date }}</p>
 			</div>
 		</div>
 		<div class="col-lg-4">
 			<div class="todo-control">
-				<button class="btn btn-primary"><i class="fa fa-pencil">&nbsp;</i>Edit</button>
-				<button class="btn btn-danger"><i class="fa fa-trash">&nbsp;</i>Delete</button>
+				<button class="btn btn-primary" ng-click="edit_status=true"><i class="fa fa-pencil">&nbsp;</i>Edit</button>
+				<button class="btn btn-danger" ng-click="$parent.delete(todo.id)"><i class="fa fa-trash">&nbsp;</i>Delete</button>
+			</div>
+		</div>
+	</div>
+	<div class="todo-priority" ng-hide="edit_status">
+		<p class="text-uppercase text-bold">{{ todo.priority }}</p>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="todo-edit-form" ng-show="edit_status">
+				<form>
+					<todo-form input="todo"></todo-form>
+					<div class="col-lg-12">
+						<button class="btn btn-success" ng-click="save(todo);">Save</button>
+						<button class="btn btn-danger" ng-click="close();">Close</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>

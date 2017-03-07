@@ -2,6 +2,7 @@ $todo-bg-color: rgba(150, 188, 13, 0.2);
 $todo-side-border-color: #96BC0D;
 
 .todo {
+	position: relative;
 	margin-top: 0.5em;
 	padding: 1em;
 	border-left: 9px solid $todo-side-border-color;
@@ -39,9 +40,25 @@ $todo-side-border-color: #96BC0D;
 	}
 	.todo-content {
 		&.completed {
-			h4, p {
+			h3, p {
 				text-decoration: line-through;
 			}
+		}
+	}
+	.todo-priority {
+		text-align: right;
+		p {
+			margin-bottom: 0;
+		}
+	}
+	.todo-edit-form {
+		button {
+			float: right;
+			margin-top: 0.5em;
+			margin-left: 0.5em;
+		}
+		label {
+			margin-top: 1em;
 		}
 	}
 }

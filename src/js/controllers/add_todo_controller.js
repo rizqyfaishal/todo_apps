@@ -10,7 +10,7 @@
 		};
 
 
-		$scope.save = function(todo){
+		$scope.save = function(todo, action){
 			var new_todo = angular.copy(todo);
 			TodoStorage.add_todo(new_todo);
 			$scope.show_detail = false;

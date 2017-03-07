@@ -3,7 +3,6 @@ $plus-mark-left: 24px;
 
 .add-todo {
 
-
 	.add-todo-title {
 		background-color: #acacac;
 		color: white;
@@ -37,9 +36,9 @@ $plus-mark-left: 24px;
 	}
 	.input-label {
 		position: relative;
-		input{
-			padding-left: 2em;
-		}
+		// input{
+		// 	padding-left: 2em;
+		// }
 		i.fa.fa-plus {
 			position: absolute;
 			top: $plus-mark-top;
@@ -49,15 +48,16 @@ $plus-mark-left: 24px;
 	.input-detail {
 		width: 100%;
 		margin-top: 1em;
-		button {
-			float: right;
-			margin-top: 0.5em;
-			margin-left: 0.5em;
-		}
+		
 		.priorities {
 			label {
 
 			}
 		}
+	}
+	button {
+		float: right;
+		margin-top: 0.5em;
+		margin-left: 0.5em;
 	}
 }

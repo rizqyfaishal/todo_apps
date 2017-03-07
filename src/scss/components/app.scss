@@ -1,6 +1,8 @@
 $app-title-bg: #acacac;
 $app-title-color: white;
-
+.text-bold {
+	font-weight: bold;
+}
 .todo-container {
 	padding: 2em 1em;
 	border: 1px solid $app-title-bg;
@@ -20,4 +22,5 @@ $app-title-color: white;
 	position: fixed;
 	top: 0;
 	right: 0;
+	font-weight: bold;
 }

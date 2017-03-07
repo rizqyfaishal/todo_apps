@@ -10423,6 +10423,10 @@ button.close {
   height: 0;
 }
 
+.text-bold {
+  font-weight: bold;
+}
+
 .todo-container {
   padding: 2em 1em;
   border: 1px solid #acacac;
@@ -10443,9 +10447,11 @@ button.close {
   position: fixed;
   top: 0;
   right: 0;
+  font-weight: bold;
 }
 
 .todo {
+  position: relative;
   margin-top: 0.5em;
   padding: 1em;
   border-left: 9px solid #96BC0D;
@@ -10484,9 +10490,27 @@ button.close {
   float: right;
 }
 
-.todo .todo-content.completed h4,
+.todo .todo-content.completed h3,
 .todo .todo-content.completed p {
   text-decoration: line-through;
+}
+
+.todo .todo-priority {
+  text-align: right;
+}
+
+.todo .todo-priority p {
+  margin-bottom: 0;
+}
+
+.todo .todo-edit-form button {
+  float: right;
+  margin-top: 0.5em;
+  margin-left: 0.5em;
+}
+
+.todo .todo-edit-form label {
+  margin-top: 1em;
 }
 
 .add-todo .add-todo-title {
@@ -10526,10 +10550,6 @@ button.close {
   position: relative;
 }
 
-.add-todo .input-label input {
-  padding-left: 2em;
-}
-
 .add-todo .input-label i.fa.fa-plus {
   position: absolute;
   top: 48px;
@@ -10541,7 +10561,7 @@ button.close {
   margin-top: 1em;
 }
 
-.add-todo .input-detail button {
+.add-todo button {
   float: right;
   margin-top: 0.5em;
   margin-left: 0.5em;
