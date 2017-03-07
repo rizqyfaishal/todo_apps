@@ -18,6 +18,7 @@ Todo App uses a number of open source projects to work properly:
 
 ### Installation
 
+
 Todo App requires [Node.js and npm](https://nodejs.org/) to run.
 
 Install gulp and http-server globaly
@@ -29,6 +30,13 @@ $ npm install -g gulp
 ```sh
 $ npm install -g http-server
 ```
+
+Clone this project 
+
+```sh
+$ git clone https://github.com/rizqyfaishal/todo_apps.git
+```
+
 Install the dependencies and devDependencies and start the server.
 
 ```sh
@@ -51,7 +59,7 @@ $ http-server -p 8000
 
 Open localhost:8000
 
-or * [demo]
+or just extract build.zip open 'build' folder and run with http-server or = [demo]
 
 
 
