@@ -45,6 +45,7 @@ $ gulp
 
 Move to 'build' folder
 ```sh
+$ cd build
 $ http-server -p 8000
 ```
 
